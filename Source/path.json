@@ -1,0 +1,43 @@
+{
+  "path":
+  [
+    {
+      "name": "3.2dev",
+      "basePath": "F:/Unity/URP_SCENE/",
+      "buttons":
+      [
+        {
+          "buttonName": "Proto",
+          "appendPath": "Library/Artifacts/"
+        },
+        {
+          "buttonName": "Xml",
+          "appendPath": "22werw33"
+        },
+        {
+          "buttonName": "Json",
+          "appendPath": "fdg"
+        }
+      ]
+    },
+    {
+      "name": "3.3dev",
+      "basePath": "3.3asdasdassd",
+      "buttons":
+      [
+        {
+          "buttonName": "Proto",
+          "appendPath": "2233"
+        },
+        {
+          "buttonName": "Xml",
+          "appendPath": "2233"
+        },
+        {
+          "buttonName": "Json",
+          "appendPath": "2233"
+        }
+      ]
+    }
+  ]
+}
