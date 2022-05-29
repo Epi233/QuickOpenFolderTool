@@ -19,7 +19,7 @@ qt_add_resources(${QRC_SOURCE_FILES})
 
 add_executable(QuickOpenFolder WIN32
         Source/main.cpp
-        Source/HK4EQuickOpenWindow.cpp
+        Source/QuickOpenWindow.cpp
         Source/ProjectItem.cpp
         ${QRC_SOURCE_FILES})
 

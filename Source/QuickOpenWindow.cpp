@@ -1,4 +1,4 @@
-#include "HK4EQuickOpenWindow.h"
+#include "QuickOpenWindow.h"
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QMessageBox>
@@ -8,7 +8,7 @@
 #include <QJsonArray>
 #include <QDesktopServices>
 
-HK4EQuickOpenWindow::HK4EQuickOpenWindow(QWidget *parent)
+QuickOpenWindow::QuickOpenWindow(QWidget *parent)
 : QMainWindow(parent)
 , ui(new Ui::MainWindow)
 {
@@ -22,7 +22,7 @@ HK4EQuickOpenWindow::HK4EQuickOpenWindow(QWidget *parent)
     LoadJson();
 }
 
-HK4EQuickOpenWindow::~HK4EQuickOpenWindow()
+QuickOpenWindow::~QuickOpenWindow()
 {
     ClearOldItem();
 
@@ -30,7 +30,7 @@ HK4EQuickOpenWindow::~HK4EQuickOpenWindow()
 }
 
 void
-HK4EQuickOpenWindow::SetStyle()
+QuickOpenWindow::SetStyle()
 {
     QFile styleFile(":/generalStyle.qss");
     styleFile.open(QFile::ReadOnly);
@@ -43,7 +43,7 @@ HK4EQuickOpenWindow::SetStyle()
 
 // Json
 void
-HK4EQuickOpenWindow::LoadJson()
+QuickOpenWindow::LoadJson()
 {
     QFile jsonFile(qApp->applicationDirPath() + "/path.json");
     if(!jsonFile.open(QIODevice::ReadOnly))
@@ -109,7 +109,7 @@ HK4EQuickOpenWindow::LoadJson()
 }
 
 void
-HK4EQuickOpenWindow::ClearOldItem()
+QuickOpenWindow::ClearOldItem()
 {
     for (int i = 0; i > _uiItemVec.size(); i++)
     {
@@ -123,7 +123,7 @@ HK4EQuickOpenWindow::ClearOldItem()
 }
 
 void
-HK4EQuickOpenWindow::OnBtnClicked(int projIndex, int btnIndex)
+QuickOpenWindow::OnBtnClicked(int projIndex, int btnIndex)
 {
     auto projItemPtr = _uiItemVec[projIndex];
     QString str = projItemPtr->GetBasePath();

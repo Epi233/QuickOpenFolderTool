@@ -2,8 +2,8 @@
 // Created by Hsing on 2022/5/25.
 //
 
-#ifndef QUICKOPENFOLDER_HK4EQUICKOPENWINDOW_H
-#define QUICKOPENFOLDER_HK4EQUICKOPENWINDOW_H
+#ifndef QUICKOPENFOLDER_QUICKOPENWINDOW_H
+#define QUICKOPENFOLDER_QUICKOPENWINDOW_H
 
 #include <QMainWindow>
 #include <QLayout>
@@ -15,13 +15,13 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class HK4EQuickOpenWindow : public QMainWindow {
+class QuickOpenWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    explicit HK4EQuickOpenWindow(QWidget *parent = nullptr);
+    explicit QuickOpenWindow(QWidget *parent = nullptr);
 
-    ~HK4EQuickOpenWindow() override;
+    ~QuickOpenWindow() override;
 
 private:
     Ui::MainWindow *ui;
@@ -41,4 +41,4 @@ private: // UI
 };
 
 
-#endif //QUICKOPENFOLDER_HK4EQUICKOPENWINDOW_H
+#endif //QUICKOPENFOLDER_QUICKOPENWINDOW_H
